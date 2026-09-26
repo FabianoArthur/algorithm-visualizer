@@ -2,13 +2,13 @@
 
 [English](README.md) · **Português (Brasil)**
 
-[![CI](https://github.com/FabianoArthur/atividades-2/actions/workflows/ci.yml/badge.svg)](https://github.com/FabianoArthur/atividades-2/actions/workflows/ci.yml)
+[![CI](https://github.com/FabianoArthur/algorithm-visualizer/actions/workflows/ci.yml/badge.svg)](https://github.com/FabianoArthur/algorithm-visualizer/actions/workflows/ci.yml)
 [![Licença: MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-blue.svg)](LICENSE)
 
 Acompanhe algoritmos de ordenação e de caminho mínimo uma operação por vez: tocar, pausar, voltar e avançar um passo, arrastar a linha do tempo e
 ajustar a velocidade. Dá também para rodar **dois algoritmos lado a lado na mesma entrada** e ver onde eles se diferenciam.
 
-**Demo ao vivo:** https://fabianoarthur.github.io/atividades-2/
+**Demo ao vivo:** https://fabianoarthur.github.io/algorithm-visualizer/
 
 ![Insertion sort contra merge sort e, depois, A* contra Dijkstra na mesma grade](docs/assets/demo.gif)
 

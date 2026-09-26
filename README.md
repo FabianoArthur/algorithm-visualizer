@@ -2,13 +2,13 @@
 
 **English** · [Português (Brasil)](README.pt-BR.md)
 
-[![CI](https://github.com/FabianoArthur/atividades-2/actions/workflows/ci.yml/badge.svg)](https://github.com/FabianoArthur/atividades-2/actions/workflows/ci.yml)
+[![CI](https://github.com/FabianoArthur/algorithm-visualizer/actions/workflows/ci.yml/badge.svg)](https://github.com/FabianoArthur/algorithm-visualizer/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Step through sorting and pathfinding algorithms one operation at a time: play, pause, step back and forward, scrub, and set the speed.
 You can also run **two algorithms side by side on the same input** and watch where they differ.
 
-**Live demo:** https://fabianoarthur.github.io/atividades-2/
+**Live demo:** https://fabianoarthur.github.io/algorithm-visualizer/
 
 ![Insertion sort vs. merge sort, then A* vs. Dijkstra on the same grid](docs/assets/demo.gif)
 
