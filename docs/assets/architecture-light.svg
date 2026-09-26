@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910 404" width="910" height="404" role="img" aria-labelledby="title desc" lang="en">
+<title id="title">How the visualizer works</title>
+<desc id="desc">An input (an array of numbers or a grid with walls and weights, generated from a seeded random number generator) is passed to an algorithm, which is a pure function that returns a trace: the full list of steps such as compare, swap, write, visit and path. You edit the input and drive a player (play, pause, step forward or back, seek, speed). The player gives an index i; the replay rebuilds the state after i steps, cheaply going forward and replaying from the start when going back, and the canvas renderer draws bars or the grid. In compare mode the same input feeds two algorithms, producing two traces and two panels driven by one clock.</desc>
+<style>text{font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;fill:#1f2328}.b{font-size:15px;font-weight:650}.h{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;fill:#59636e}.code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;font-size:12.5px}.m{font-size:12px;fill:#59636e}.lbl{font-size:12px;fill:#59636e;font-style:italic}.card{fill:#f6f8fa;stroke:#d0d7de}.you{fill:#fff7ed;stroke:#fdba74}.zone{fill:#f0fdfa;stroke:#99f6e4;stroke-dasharray:5 4}.zt{fill:#0f766e}.e{fill:none;stroke:#8c959f;stroke-width:1.5}.dot{fill:#0f766e}.halo{fill:#0f766e;opacity:.25}.hl{fill:none;stroke:#0f766e;stroke-width:2;opacity:0}.s0{animation:s0 9.0s linear infinite}@keyframes s0{0%,0%{opacity:0;transform:translate(95.0px,236px)}0%{opacity:1;transform:translate(95.0px,236px)}7%{opacity:1;transform:translate(95.0px,162px)}7.01%,100%{opacity:0;transform:translate(95.0px,162px)}}.s1{animation:s1 9.0s linear infinite}@keyframes s1{0%,11.99%{opacity:0;transform:translate(168px,116.0px)}12%{opacity:1;transform:translate(168px,116.0px)}19%{opacity:1;transform:translate(202px,116.0px)}19.01%,100%{opacity:0;transform:translate(202px,116.0px)}}.s2{animation:s2 9.0s linear infinite}@keyframes s2{0%,23.99%{opacity:0;transform:translate(348px,116.0px)}24%{opacity:1;transform:translate(348px,116.0px)}31%{opacity:1;transform:translate(382px,116.0px)}31.01%,100%{opacity:0;transform:translate(382px,116.0px)}}.s3{animation:s3 9.0s linear infinite}@keyframes s3{0%,35.99%{opacity:0;transform:translate(528px,116.0px)}36%{opacity:1;transform:translate(528px,116.0px)}43%{opacity:1;transform:translate(562px,116.0px)}43.01%,100%{opacity:0;transform:translate(562px,116.0px)}}.s4{animation:s4 9.0s linear infinite}@keyframes s4{0%,42.99%{opacity:0;transform:translate(168px,268px)}43%{opacity:1;transform:translate(168px,268px)}55%{opacity:1;transform:translate(562px,268px)}55.01%,100%{opacity:0;transform:translate(562px,268px)}}.s5{animation:s5 9.0s linear infinite}@keyframes s5{0%,54.99%{opacity:0;transform:translate(635.0px,236px)}55%{opacity:1;transform:translate(635.0px,236px)}61%{opacity:1;transform:translate(635.0px,162px)}61.01%,100%{opacity:0;transform:translate(635.0px,162px)}}.s6{animation:s6 9.0s linear infinite}@keyframes s6{0%,66.99%{opacity:0;transform:translate(708px,116.0px)}67%{opacity:1;transform:translate(708px,116.0px)}74%{opacity:1;transform:translate(742px,116.0px)}74.01%,100%{opacity:0;transform:translate(742px,116.0px)}}.h0{animation:h0 9.0s ease-in-out infinite}@keyframes h0{0%,7%{opacity:0}8.5%,11.5%{opacity:1}13%,100%{opacity:0}}.h1{animation:h1 9.0s ease-in-out infinite}@keyframes h1{0%,19%{opacity:0}20.5%,23.5%{opacity:1}25%,100%{opacity:0}}.h2{animation:h2 9.0s ease-in-out infinite}@keyframes h2{0%,31%{opacity:0}32.5%,35.5%{opacity:1}37%,100%{opacity:0}}.h3{animation:h3 9.0s ease-in-out infinite}@keyframes h3{0%,55%{opacity:0}56.5%,59.5%{opacity:1}61%,100%{opacity:0}}.h4{animation:h4 9.0s ease-in-out infinite}@keyframes h4{0%,61%{opacity:0}62.5%,66.5%{opacity:1}68%,100%{opacity:0}}.h5{animation:h5 9.0s ease-in-out infinite}@keyframes h5{0%,74%{opacity:0}75.5%,88.5%{opacity:1}90%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){.pk,.hl{animation:none!important;display:none}}</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#8c959f"/></marker></defs>
+<rect x="0.5" y="0.5" width="909" height="403" rx="16" fill="#ffffff" stroke="#d0d7de"/>
+<text x="22" y="42" class="h">how it works</text>
+<rect x="22" y="70" width="146" height="92" rx="10" class="card"/>
+<text x="95.0" y="98" class="b" text-anchor="middle">input</text>
+<text x="95.0" y="122" class="code" text-anchor="middle">array · grid</text>
+<text x="95.0" y="144" class="m" text-anchor="middle">seeded RNG</text>
+<rect x="202" y="70" width="146" height="92" rx="10" class="card"/>
+<text x="275.0" y="98" class="b" text-anchor="middle">algorithm</text>
+<text x="275.0" y="122" class="code" text-anchor="middle">pure function</text>
+<text x="275.0" y="144" class="m" text-anchor="middle">bubble · merge · A* …</text>
+<rect x="382" y="70" width="146" height="92" rx="10" class="card"/>
+<text x="455.0" y="98" class="b" text-anchor="middle">trace</text>
+<text x="455.0" y="122" class="code" text-anchor="middle">Step[]</text>
+<text x="455.0" y="144" class="m" text-anchor="middle">compare · swap · visit</text>
+<rect x="562" y="70" width="146" height="92" rx="10" class="card"/>
+<text x="635.0" y="98" class="b" text-anchor="middle">replay</text>
+<text x="635.0" y="122" class="code" text-anchor="middle">state at step i</text>
+<text x="635.0" y="144" class="m" text-anchor="middle">cached going forward</text>
+<rect x="742" y="70" width="146" height="92" rx="10" class="card"/>
+<text x="815.0" y="98" class="b" text-anchor="middle">canvas</text>
+<text x="815.0" y="122" class="code" text-anchor="middle">bars · grid</text>
+<text x="815.0" y="144" class="m" text-anchor="middle">light / dark, HiDPI</text>
+<line x1="168" y1="116.0" x2="200" y2="116.0" class="e" marker-end="url(#ah)"/>
+<line x1="348" y1="116.0" x2="380" y2="116.0" class="e" marker-end="url(#ah)"/>
+<line x1="528" y1="116.0" x2="560" y2="116.0" class="e" marker-end="url(#ah)"/>
+<line x1="708" y1="116.0" x2="740" y2="116.0" class="e" marker-end="url(#ah)"/>
+<rect x="22" y="236" width="146" height="64" rx="10" class="you"/>
+<text x="95.0" y="262" class="b" text-anchor="middle">you</text>
+<text x="95.0" y="283" class="m" text-anchor="middle">edit the input</text>
+<rect x="562" y="236" width="146" height="64" rx="10" class="card"/>
+<text x="635.0" y="262" class="b" text-anchor="middle">player</text>
+<text x="635.0" y="283" class="m" text-anchor="middle">play · step · seek</text>
+<line x1="95.0" y1="236" x2="95.0" y2="164" class="e" marker-end="url(#ah)"/>
+<text x="103.0" y="203.0" class="lbl">edit</text>
+<line x1="168" y1="268" x2="560" y2="268" class="e" marker-end="url(#ah)"/>
+<text x="365.0" y="260" class="lbl" text-anchor="middle">controls</text>
+<line x1="635.0" y1="236" x2="635.0" y2="164" class="e" marker-end="url(#ah)"/>
+<text x="643.0" y="203.0" class="lbl">index i</text>
+<rect x="22" y="326" width="866" height="52" rx="12" class="zone"/>
+<text x="42" y="357"><tspan class="h zt">compare mode</tspan><tspan class="m" dx="14" style="fill:#1f2328">same input → 2 algorithms → 2 traces → 2 panels, one clock</tspan></text>
+<rect x="22" y="70" width="146" height="92" rx="10" class="hl h0"/>
+<rect x="202" y="70" width="146" height="92" rx="10" class="hl h1"/>
+<rect x="382" y="70" width="146" height="92" rx="10" class="hl h2"/>
+<rect x="562" y="236" width="146" height="64" rx="10" class="hl h3"/>
+<rect x="562" y="70" width="146" height="92" rx="10" class="hl h4"/>
+<rect x="742" y="70" width="146" height="92" rx="10" class="hl h5"/>
+<g class="pk s0"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s1"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s2"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s3"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s4"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s5"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s6"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+</svg>

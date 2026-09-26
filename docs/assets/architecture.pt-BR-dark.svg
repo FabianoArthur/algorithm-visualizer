@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 910 404" width="910" height="404" role="img" aria-labelledby="title desc" lang="pt-BR">
+<title id="title">Como o visualizador funciona</title>
+<desc id="desc">Uma entrada (um vetor de números ou uma grade com paredes e pesos, gerada por um gerador aleatório com semente) vai para um algoritmo, uma função pura que devolve um rastro: a lista completa de passos, como comparar, trocar, escrever, visitar e caminho. Você edita a entrada e comanda um player (tocar, pausar, avançar ou voltar um passo, buscar, velocidade). O player fornece um índice i; o replay reconstrói o estado depois de i passos, barato para frente e refazendo do início para trás, e o renderizador em canvas desenha as barras ou a grade. No modo comparação, a mesma entrada alimenta dois algoritmos, gerando dois rastros e dois painéis movidos por um só relógio.</desc>
+<style>text{font-family:ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;fill:#e6edf3}.b{font-size:15px;font-weight:650}.h{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;fill:#9198a1}.code{font-family:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;font-size:12.5px}.m{font-size:12px;fill:#9198a1}.lbl{font-size:12px;fill:#9198a1;font-style:italic}.card{fill:#161b22;stroke:#3d444d}.you{fill:#2a1a0b;stroke:#9a5b1d}.zone{fill:#0b2723;stroke:#115e59;stroke-dasharray:5 4}.zt{fill:#5eead4}.e{fill:none;stroke:#6e7681;stroke-width:1.5}.dot{fill:#2dd4bf}.halo{fill:#2dd4bf;opacity:.25}.hl{fill:none;stroke:#2dd4bf;stroke-width:2;opacity:0}.s0{animation:s0 9.0s linear infinite}@keyframes s0{0%,0%{opacity:0;transform:translate(95.0px,236px)}0%{opacity:1;transform:translate(95.0px,236px)}7%{opacity:1;transform:translate(95.0px,162px)}7.01%,100%{opacity:0;transform:translate(95.0px,162px)}}.s1{animation:s1 9.0s linear infinite}@keyframes s1{0%,11.99%{opacity:0;transform:translate(168px,116.0px)}12%{opacity:1;transform:translate(168px,116.0px)}19%{opacity:1;transform:translate(202px,116.0px)}19.01%,100%{opacity:0;transform:translate(202px,116.0px)}}.s2{animation:s2 9.0s linear infinite}@keyframes s2{0%,23.99%{opacity:0;transform:translate(348px,116.0px)}24%{opacity:1;transform:translate(348px,116.0px)}31%{opacity:1;transform:translate(382px,116.0px)}31.01%,100%{opacity:0;transform:translate(382px,116.0px)}}.s3{animation:s3 9.0s linear infinite}@keyframes s3{0%,35.99%{opacity:0;transform:translate(528px,116.0px)}36%{opacity:1;transform:translate(528px,116.0px)}43%{opacity:1;transform:translate(562px,116.0px)}43.01%,100%{opacity:0;transform:translate(562px,116.0px)}}.s4{animation:s4 9.0s linear infinite}@keyframes s4{0%,42.99%{opacity:0;transform:translate(168px,268px)}43%{opacity:1;transform:translate(168px,268px)}55%{opacity:1;transform:translate(562px,268px)}55.01%,100%{opacity:0;transform:translate(562px,268px)}}.s5{animation:s5 9.0s linear infinite}@keyframes s5{0%,54.99%{opacity:0;transform:translate(635.0px,236px)}55%{opacity:1;transform:translate(635.0px,236px)}61%{opacity:1;transform:translate(635.0px,162px)}61.01%,100%{opacity:0;transform:translate(635.0px,162px)}}.s6{animation:s6 9.0s linear infinite}@keyframes s6{0%,66.99%{opacity:0;transform:translate(708px,116.0px)}67%{opacity:1;transform:translate(708px,116.0px)}74%{opacity:1;transform:translate(742px,116.0px)}74.01%,100%{opacity:0;transform:translate(742px,116.0px)}}.h0{animation:h0 9.0s ease-in-out infinite}@keyframes h0{0%,7%{opacity:0}8.5%,11.5%{opacity:1}13%,100%{opacity:0}}.h1{animation:h1 9.0s ease-in-out infinite}@keyframes h1{0%,19%{opacity:0}20.5%,23.5%{opacity:1}25%,100%{opacity:0}}.h2{animation:h2 9.0s ease-in-out infinite}@keyframes h2{0%,31%{opacity:0}32.5%,35.5%{opacity:1}37%,100%{opacity:0}}.h3{animation:h3 9.0s ease-in-out infinite}@keyframes h3{0%,55%{opacity:0}56.5%,59.5%{opacity:1}61%,100%{opacity:0}}.h4{animation:h4 9.0s ease-in-out infinite}@keyframes h4{0%,61%{opacity:0}62.5%,66.5%{opacity:1}68%,100%{opacity:0}}.h5{animation:h5 9.0s ease-in-out infinite}@keyframes h5{0%,74%{opacity:0}75.5%,88.5%{opacity:1}90%,100%{opacity:0}}@media (prefers-reduced-motion:reduce){.pk,.hl{animation:none!important;display:none}}</style>
+<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,1 L9,5 L0,9 z" fill="#6e7681"/></marker></defs>
+<rect x="0.5" y="0.5" width="909" height="403" rx="16" fill="#0d1117" stroke="#30363d"/>
+<text x="22" y="42" class="h">como funciona</text>
+<rect x="22" y="70" width="146" height="92" rx="10" class="card"/>
+<text x="95.0" y="98" class="b" text-anchor="middle">entrada</text>
+<text x="95.0" y="122" class="code" text-anchor="middle">vetor · grade</text>
+<text x="95.0" y="144" class="m" text-anchor="middle">RNG com semente</text>
+<rect x="202" y="70" width="146" height="92" rx="10" class="card"/>
+<text x="275.0" y="98" class="b" text-anchor="middle">algoritmo</text>
+<text x="275.0" y="122" class="code" text-anchor="middle">função pura</text>
+<text x="275.0" y="144" class="m" text-anchor="middle">bubble · merge · A* …</text>
+<rect x="382" y="70" width="146" height="92" rx="10" class="card"/>
+<text x="455.0" y="98" class="b" text-anchor="middle">rastro</text>
+<text x="455.0" y="122" class="code" text-anchor="middle">Step[]</text>
+<text x="455.0" y="144" class="m" text-anchor="middle">compara · troca · visita</text>
+<rect x="562" y="70" width="146" height="92" rx="10" class="card"/>
+<text x="635.0" y="98" class="b" text-anchor="middle">replay</text>
+<text x="635.0" y="122" class="code" text-anchor="middle">estado no passo i</text>
+<text x="635.0" y="144" class="m" text-anchor="middle">cache ao avançar</text>
+<rect x="742" y="70" width="146" height="92" rx="10" class="card"/>
+<text x="815.0" y="98" class="b" text-anchor="middle">canvas</text>
+<text x="815.0" y="122" class="code" text-anchor="middle">barras · grade</text>
+<text x="815.0" y="144" class="m" text-anchor="middle">claro / escuro, HiDPI</text>
+<line x1="168" y1="116.0" x2="200" y2="116.0" class="e" marker-end="url(#ah)"/>
+<line x1="348" y1="116.0" x2="380" y2="116.0" class="e" marker-end="url(#ah)"/>
+<line x1="528" y1="116.0" x2="560" y2="116.0" class="e" marker-end="url(#ah)"/>
+<line x1="708" y1="116.0" x2="740" y2="116.0" class="e" marker-end="url(#ah)"/>
+<rect x="22" y="236" width="146" height="64" rx="10" class="you"/>
+<text x="95.0" y="262" class="b" text-anchor="middle">você</text>
+<text x="95.0" y="283" class="m" text-anchor="middle">edita a entrada</text>
+<rect x="562" y="236" width="146" height="64" rx="10" class="card"/>
+<text x="635.0" y="262" class="b" text-anchor="middle">player</text>
+<text x="635.0" y="283" class="m" text-anchor="middle">tocar · passo · busca</text>
+<line x1="95.0" y1="236" x2="95.0" y2="164" class="e" marker-end="url(#ah)"/>
+<text x="103.0" y="203.0" class="lbl">edita</text>
+<line x1="168" y1="268" x2="560" y2="268" class="e" marker-end="url(#ah)"/>
+<text x="365.0" y="260" class="lbl" text-anchor="middle">controles</text>
+<line x1="635.0" y1="236" x2="635.0" y2="164" class="e" marker-end="url(#ah)"/>
+<text x="643.0" y="203.0" class="lbl">índice i</text>
+<rect x="22" y="326" width="866" height="52" rx="12" class="zone"/>
+<text x="42" y="357"><tspan class="h zt">modo comparação</tspan><tspan class="m" dx="14" style="fill:#e6edf3">mesma entrada → 2 algoritmos → 2 rastros → 2 painéis, um relógio</tspan></text>
+<rect x="22" y="70" width="146" height="92" rx="10" class="hl h0"/>
+<rect x="202" y="70" width="146" height="92" rx="10" class="hl h1"/>
+<rect x="382" y="70" width="146" height="92" rx="10" class="hl h2"/>
+<rect x="562" y="236" width="146" height="64" rx="10" class="hl h3"/>
+<rect x="562" y="70" width="146" height="92" rx="10" class="hl h4"/>
+<rect x="742" y="70" width="146" height="92" rx="10" class="hl h5"/>
+<g class="pk s0"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s1"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s2"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s3"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s4"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s5"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+<g class="pk s6"><circle r="9" class="halo"/><circle r="4.5" class="dot"/></g>
+</svg>

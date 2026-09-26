@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Step through sorting and pathfinding algorithms, frame by frame, and compare two of them side by side." />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect x='1' y='9' width='3' height='6' rx='1' fill='%2394a3b8'/%3E%3Crect x='6.5' y='5' width='3' height='10' rx='1' fill='%23f59e0b'/%3E%3Crect x='12' y='1' width='3' height='14' rx='1' fill='%2314b8a6'/%3E%3C/svg%3E" />
+    <title>Algorithm Visualizer</title>
+  </head>
+  <body>
+    <a class="skip" href="#controls">Skip to controls</a>
+    <header class="top">
+      <div class="brand">
+        <h1>Algorithm Visualizer</h1>
+        <p class="tagline">Sorting and pathfinding, one step at a time.</p>
+      </div>
+      <div class="segmented" role="group" aria-label="Mode">
+        <button type="button" data-mode="sorting" aria-pressed="true">Sorting</button>
+        <button type="button" data-mode="pathfinding" aria-pressed="false">Pathfinding</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="controls" class="toolbar" aria-label="Playback controls">
+        <div class="transport">
+          <button type="button" id="step-back" class="icon" aria-label="Step back" title="Step back (←)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 5v14M18 6l-9 6 9 6z" /></svg>
+          </button>
+          <button type="button" id="play" class="primary" aria-label="Play" title="Play / pause (Space)">
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5l12 7-12 7z" /></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 5h3v14H7zM14 5h3v14h-3z" /></svg>
+          </button>
+          <button type="button" id="step-forward" class="icon" aria-label="Step forward" title="Step forward (→)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 5v14M6 6l9 6-9 6z" /></svg>
+          </button>
+          <button type="button" id="reset" class="icon" aria-label="Rewind to start" title="Rewind (R)">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4" /></svg>
+          </button>
+        </div>
+        <label class="field scrub">
+          <span>Step <output id="step-label">0 / 0</output></span>
+          <input type="range" id="scrubber" min="0" max="0" value="0" />
+        </label>
+        <label class="field speed">
+          <span>Speed <output id="speed-label"></output></span>
+          <input type="range" id="speed" min="0" max="100" value="45" />
+        </label>
+        <label class="toggle">
+          <input type="checkbox" id="compare" />
+          <span>Compare side by side</span>
+        </label>
+      </section>
+
+      <section class="options" aria-label="Input options">
+        <div class="opt-group" data-for="sorting">
+          <label class="field">
+            <span>Input</span>
+            <select id="preset"></select>
+          </label>
+          <label class="field">
+            <span>Size <output id="size-label"></output></span>
+            <input type="range" id="size" min="8" max="120" value="48" />
+          </label>
+          <button type="button" id="shuffle" class="ghost">New input</button>
+        </div>
+        <div class="opt-group" data-for="pathfinding" hidden>
+          <div class="segmented small" role="group" aria-label="Brush">
+            <button type="button" data-tool="wall" aria-pressed="true">Wall</button>
+            <button type="button" data-tool="weight" aria-pressed="false">Weight ×5</button>
+            <button type="button" data-tool="erase" aria-pressed="false">Erase</button>
+          </div>
+          <button type="button" id="maze" class="ghost">Random maze</button>
+          <button type="button" id="clear" class="ghost">Clear</button>
+          <p class="hint">Draw on the grid. Drag the <b class="k-start">start</b> and <b class="k-target">target</b> to move them.</p>
+        </div>
+      </section>
+
+      <section id="panels" class="panels" aria-label="Visualizations"></section>
+
+      <ul class="legend" data-for="sorting">
+        <li><i class="sw compare"></i>comparing</li>
+        <li><i class="sw write"></i>swap / write</li>
+        <li><i class="sw sorted"></i>in final place</li>
+      </ul>
+      <ul class="legend" data-for="pathfinding" hidden>
+        <li><i class="sw frontier"></i>frontier</li>
+        <li><i class="sw visited"></i>visited</li>
+        <li><i class="sw path"></i>path</li>
+        <li><i class="sw weight"></i>weight (costs more to enter)</li>
+        <li><i class="sw wall"></i>wall</li>
+      </ul>
+
+      <p id="announcer" class="sr-only" aria-live="polite"></p>
+    </main>
+
+    <footer class="foot">
+      <span>Keys: <kbd>Space</kbd> play/pause · <kbd>←</kbd><kbd>→</kbd> step · <kbd>R</kbd> rewind · <kbd>N</kbd> new input</span>
+      <a href="https://github.com/FabianoArthur/atividades-2">Source on GitHub</a>
+    </footer>
+
+    <template id="panel-template">
+      <article class="panel">
+        <header class="panel-head">
+          <label class="field inline">
+            <span class="sr-only">Algorithm</span>
+            <select class="algo"></select>
+          </label>
+          <span class="note"></span>
+        </header>
+        <div class="stage"><canvas role="img"></canvas></div>
+        <p class="stats"></p>
+      </article>
+    </template>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
